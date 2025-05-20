@@ -55,8 +55,6 @@ function App() {
 
                 if (foundDave && foundCookie) {
                   setAlert("🔥 PUT THE COOKIES DOWN, DAVE! THIS ISN'T THE SNACK YOU'RE LOOKING FOR! 🍪");
-                } else if (foundDave) {
-                  setAlert("🧢 Dave Blunts is in the building!");
                 } else if (foundCookie) {
                   setAlert("🍪 Cookies nearby... keep them away from Dave!");
                 } else {
