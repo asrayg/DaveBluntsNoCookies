@@ -1,4 +1,3 @@
-// App.js
 import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
 import cupImage from './assets/image-removebg-preview (90).png';
@@ -55,7 +54,11 @@ function App() {
                 });
 
                 if (foundDave && foundCookie) {
-                  setAlert("🔥 PUT THE COOKIES DOWN, DAVE! THIS ISN'T THE SNACK YOURE LOOKING FOR! 🍪");
+                  setAlert("🔥 PUT THE COOKIES DOWN, DAVE! THIS ISN'T THE SNACK YOU'RE LOOKING FOR! 🍪");
+                } else if (foundDave) {
+                  setAlert("🧢 Dave Blunts is in the building!");
+                } else if (foundCookie) {
+                  setAlert("🍪 Cookies nearby... keep them away from Dave!");
                 } else {
                   setAlert("");
                 }
@@ -81,14 +84,14 @@ function App() {
     <div className="app">
       <h1 className="hero-text">☁️ Dave Blunts Please, no cookies please! 🍪</h1>
       <div className="video-container">
-        <video ref={videoRef} autoPlay muted playsInline width="640" height="480" />
-        <canvas ref={canvasRef} width="640" height="480" />
+        <video ref={videoRef} autoPlay muted playsInline className="video-feed" />
+        <canvas ref={canvasRef} className="video-feed" />
       </div>
       <h2 className="alert-box flashy-alert">{alert}</h2>
       <div className="footer">
         <p className="footer-text">💨 Brought to you by Dave Blunts Detection Tech</p>
         <div className="cup">
-          <img src={cupImage} alt="Chill Cup" width="100" />
+          <img src={cupImage} alt="Chill Cup" className="cup-img" />
         </div>
       </div>
     </div>
