@@ -99,3 +99,47 @@ video, canvas {
   color: white;
   font-size: 1rem;
 }
+
+
+.video-feed {
+  width: 100%;
+  height: auto;
+  max-width: 640px;
+  border-radius: 10px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin: 20px auto;
+  aspect-ratio: 4 / 3;
+}
+
+canvas.video-feed,
+video.video-feed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-text {
+  font-size: 2rem;
+  padding: 0 10px;
+}
+
+.alert-box.flashy-alert {
+  font-size: 1.2rem;
+  padding: 0 15px;
+}
+
+.footer {
+  margin-top: 40px;
+}
+
+.cup-img {
+  width: 80px;
+  height: auto;
+}
